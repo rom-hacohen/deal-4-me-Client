@@ -46,7 +46,7 @@ const TemNavBAr = () => {
               </h1>
               <nav id="fh5co-menu-wrap" role="navigation">
                 <ul className="sf-menu" id="fh5co-primary-menu">
-                  {!!User.length ? (
+                  {User.length <0 ? (
                     <li className="active">
                       {User.admin == 0 ?(<a> {User.first_name}- admin</a>):(<a> {User.first_name}</a>)}
                       

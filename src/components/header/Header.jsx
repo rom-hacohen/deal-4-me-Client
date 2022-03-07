@@ -14,7 +14,7 @@ console.log(User);
             <div className="slider-text-inner js-fullheight">
               <div className="desc">
 
-                {!!User.length ? (<>
+                {User.length < 0 ? (<>
 					<p>
                   <span>WELCOM {User.first_name}</span>
                 </p>
