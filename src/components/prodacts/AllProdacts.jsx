@@ -98,6 +98,7 @@ const AllProdacts = ({socket}) => {
   
   
       const checkDeal = (id)=>{
+         if (!!isFollowd.length) {
       const exsist = isFollowd.find(obj => obj.dealID === id)
       if (exsist && User !== null) {
         console.log(exsist);
@@ -106,7 +107,7 @@ const AllProdacts = ({socket}) => {
             Followed!  <i className="ti-angle-right"></i>
           </button>
         )
-      }
+        }}
    
       else{ return(<button
         onClick={() => followDeal(id)}
@@ -147,7 +148,7 @@ const AllProdacts = ({socket}) => {
               {!!deals.length && deals.map((x, ind) => (
                 <div className="f-hotel" key={ind} style={{marginBottom:15}}>
                   <div
-                    className="image"
+                    className="image"   
                     style={{ backgroundImage: `url(${x.img_src})` }}
                   >
                     <div className="descrip text-center">
@@ -166,7 +167,7 @@ const AllProdacts = ({socket}) => {
                     <p>{x.Description}</p>
                     <h4> Dates: {x.dates}</h4>
                         <p>
-                          {User ?
+                          {User !== null ?
                           (
                        <>
                         {checkDeal(x.dealID)}

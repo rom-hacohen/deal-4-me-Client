@@ -89,6 +89,7 @@ console.log(socketMsg);
 
 
     const checkDeal = (id)=>{
+      if (!!isFollowd.length) {
     const exsist = isFollowd.find(obj => obj.dealID === id)
     if (exsist && User !== null) {
       console.log(exsist);
@@ -98,7 +99,7 @@ console.log(socketMsg);
         </button>
       )
     }
- 
+  }
     else{ return(<button
       onClick={() => followDeal(id)}
       className="btn btn-primary btn-luxe-primary"
@@ -156,7 +157,7 @@ console.log(socketMsg);
                   <p>{x.Description}</p>
                   <h4> Dates: {x.dates}</h4>
                       <p>
-                        {User ?
+                        {!!User.length ?
                         (
                      <>
                       {checkDeal(x.dealID)}

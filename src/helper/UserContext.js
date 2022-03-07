@@ -1,5 +1,5 @@
 import React, { createContext } from "react";
 
-export const UserContext = createContext([]);
+export const UserContext = createContext(null);
 
-export const DealContext = createContext([]);
+export const DealContext = createContext(null)
