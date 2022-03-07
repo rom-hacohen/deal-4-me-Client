@@ -22,7 +22,7 @@ const TemNavBAr = () => {
   };
 
   const CheckAuth = () => {
-    if (auth === true && !!AuthUser.length) {
+    if (auth === true && AuthUser !== null) {
       setUser(AuthUser);
     }
   };
@@ -46,7 +46,7 @@ const TemNavBAr = () => {
               </h1>
               <nav id="fh5co-menu-wrap" role="navigation">
                 <ul className="sf-menu" id="fh5co-primary-menu">
-                  {User !== null ? (
+                  {!!User.length ? (
                     <li className="active">
                       {User.admin == 0 ?(<a> {User.first_name}- admin</a>):(<a> {User.first_name}</a>)}
                       
