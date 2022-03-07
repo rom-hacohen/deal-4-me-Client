@@ -14,7 +14,7 @@ import Footer from "./components/Footer/Footer";
 const { io } = require("socket.io-client");
 
 function App() {
-  const [User, setUser] = useState([]);
+  const [User, setUser] = useState(null);
   const URL = "https://deal-4-me.herokuapp.com";
   const socket = io.connect(URL);
 
