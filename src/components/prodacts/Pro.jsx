@@ -91,7 +91,7 @@ console.log(socketMsg);
     const checkDeal = (id)=>{
     const exsist = isFollowd.find(obj => obj.dealID === id)
     if (exsist && User !== null) {
-      console.log(exsist);
+      console.log(exsist); 
      return (
         <button className="btn btn-dark btn-luxe-primary">
           Followed!  <i className="ti-angle-right"></i>

@@ -42,7 +42,7 @@ const TemNavBAr = () => {
                 <i></i>
               </a>
               <h1 id="fh5co-logo">
-                <a href="/">DEAL-4-ME</a>
+                <Link to="/"><a>DEAL-4-ME</a></Link>
               </h1>
               <nav id="fh5co-menu-wrap" role="navigation">
                 <ul className="sf-menu" id="fh5co-primary-menu">

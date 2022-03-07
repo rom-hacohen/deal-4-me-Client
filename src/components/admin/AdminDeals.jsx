@@ -59,7 +59,7 @@ const AdminDeals = ({socket}) => {
             console.log(json);
             setrender(true)
             socket.emit("sendUpdate",false)
-            handleClose()
+            handleCloseUpdate()
         }
       })
         .catch((error) => {
