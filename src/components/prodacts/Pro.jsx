@@ -157,7 +157,7 @@ console.log(socketMsg);
                   <p>{x.Description}</p>
                   <h4> Dates: {x.dates}</h4>
                       <p>
-                        {!!User.length ?
+                        {User !== null ?
                         (
                      <>
                       {checkDeal(x.dealID)}
