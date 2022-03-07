@@ -56,7 +56,7 @@ const MyFollows = () => {
         <div className="container">
           <div className="feature-full-2col">
             <div className="row">
-              {FollowDeals.map((x, ind) => (
+              {!!FollowDeals.length && lengthFollowDeals.map((x, ind) => (
                 <div
                   className="f-hotel"
                   key={ind}
